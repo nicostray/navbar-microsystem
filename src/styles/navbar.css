@@ -1,0 +1,92 @@
+.navbar__containerSuperior{
+    display:flex;
+    flex-direction: column;
+    overflow-x:hidden;
+}
+
+.navbar__container{
+    display:flex;
+    height: 60px;
+    justify-content: space-between;
+    background-color: #252525;
+    padding:0 50px;
+    color:white;
+    align-items: center;
+    position:relative;
+}
+
+.navbar__logo{
+    font-size: 1.2rem;
+}
+
+.navbar__links{
+    display:flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.navbar__link{
+    text-decoration: none;
+    color:white;
+}
+
+.navbar__linkContainer:hover{
+    transform: scale(1.1);
+    transition:all 0.3s ease-in-out
+}
+
+.navbar__buttonMenu{
+    background-color: #424242;
+    color:white;
+    border-radius: 5px;
+    border:rgb(199, 199, 199) 1px solid;
+    padding: 7px 8px;
+    display:none;
+}
+
+.navbar__separador{
+    width: 40%;
+    background-color: rgb(203, 203, 203);
+    height: 1px;
+    display:none;
+}
+
+@media(max-width:450px){
+    .navbar__links{
+        display:none;
+    }
+
+    .navbar__link{
+        color:black;
+        font-size: 1.2rem;
+    }
+
+    .navbar__buttonMenu{
+        display:block;
+    }
+
+    .navbar__drawer{
+        position:absolute;
+        height: calc(100vh - 60px);
+        width: 100%;
+        z-index:99;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+        background: white;
+        color: black;
+        margin:0;
+        list-style: none;
+    }
+    
+    .navbar__drawer h3{
+        font-size: 1.4rem;
+        margin-top:20px;
+        margin-bottom:30px;
+    }
+    
+    .navbar__separador{
+        display:block;
+    }
+}
